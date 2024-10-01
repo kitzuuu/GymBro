@@ -1,0 +1,81 @@
+.container{
+    background-color: #121212;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+#head-text{
+    margin-bottom: 50px;
+    color: white;
+}
+#protein-text-h2 {
+    color: green;
+}
+#protein-progress-bar{
+
+}
+#protein-progress{
+    margin-bottom: 75px;
+}
+#carbs-text-h2 {
+    color: steelblue;
+}
+#carbs-progress-bar{
+
+}
+#carbs-progress{
+    margin-bottom: 75px;
+}
+#fat-text-h2 {
+    color: yellow;
+}
+#fat-progress-bar{
+
+}
+#fat-progress{
+    margin-bottom: 75px;
+}
+
+
+#nav {
+    background-color: #000;
+    align-items: center;
+    padding: 25px; /* Increased padding */
+    font-family: Calibri, sans-serif;
+    font-size: large;
+    justify-content: space-between;
+   /* Increased height */
+}
+
+#nav a {
+    border-radius: 58px;
+    color: #fff;
+    font-size: inherit;
+    padding: 15px 20px;
+    text-decoration: none;
+}
+#logo{
+    display: inline;
+    margin : auto;
+}
+#logo-image{
+    max-width:125px;
+    max-height: 125px;
+    min-height:75px;
+    min-width:75px;
+}
+
+#nav  a:hover {
+    color: blue;
+}
+
+.activebtn {
+    background-color: #dc143c;
+}
+
+.form-check label{
+    color: lightgray;
+}
+
+.Setting{
+    color:lightgray;
+}
