@@ -16,3 +16,40 @@
 #protein-progress{
     margin-bottom: 50px;
 }
+
+
+.nav {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    padding: 25px; /* Increased padding */
+    font-family: Calibri, sans-serif;
+    font-size: 24px; /* Increased font size */
+    border-radius: 98px;
+    justify-content: space-between;
+    height: 7rem; /* Increased height */
+}
+
+.nav a {
+    border-radius: 58px;
+    color: #fff;
+    margin-left: 15px; /* Increased margin for better spacing */
+    font-size: inherit;
+    padding: 15px 20px; /* Increased padding for larger clickable area */
+    text-decoration: underline;
+}
+
+.logo {
+    margin-right: 20px;
+    height: 90px; /* Increased size of logo */
+    width: 90px;  /* Adjusted width to match height */
+    border-radius: 50%;
+}
+
+.nav a:hover {
+    background-color: #ff0000;
+}
+
+.activebtn {
+    background-color: #dc143c;
+}
