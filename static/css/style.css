@@ -79,3 +79,8 @@
 .Setting{
     color:lightgray;
 }
+
+.current-page{
+    pointer-events: none;
+    color:red !important;
+}

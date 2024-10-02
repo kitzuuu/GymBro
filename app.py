@@ -4,8 +4,8 @@ app = fl.Flask(__name__)
 
 # Route for the home page
 @app.route('/')
-def home():
-    return fl.render_template('index.html')
+def macroOverview():
+    return fl.render_template('macroOverview.html')
 
 # Route for the settings page
 @app.route('/settings')
@@ -13,9 +13,13 @@ def settings():
     return fl.render_template('settings.html')
 
 # Route for the planner page
-@app.route('/planner')
-def planner():
-    return fl.render_template('planner.html')
+@app.route('/workoutPlanner')
+def workoutPlanner():
+    return fl.render_template('workoutPlanner.html')
+
+@app.route('/mealPlanning')
+def mealPlanning():
+    return fl.render_template('mealPlanning.html')
 
 # Route to save settings via POST request
 @app.route('/save-settings', methods=['POST'])
