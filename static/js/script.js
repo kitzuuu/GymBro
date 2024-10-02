@@ -1,9 +1,3 @@
-// JavaScript to automatically save user input
-// EventListener for dropdown
-    document.getElementById('dropdownBox').addEventListener('click', function() {
-    this.classList.toggle('expanded');
-});
-
 
 document.addEventListener('DOMContentLoaded', function() {
     // Get all input elements
