@@ -1,11 +1,21 @@
 import flask as fl
+import calculateMacroProgress
+from calculateGoalCalories import calculateMacros
 
 app = fl.Flask(__name__)
 
 # Route for the home page
+def calculateMacros():
+    protein='0'
+    carbs='0'
+    fat='0'
+    return protein, carbs, fat
+
+
 @app.route('/')
 def macroOverview():
-    return fl.render_template('macroOverview.html')
+    protein,carbs,fat = calculateMacros()
+    return fl.render_template('macroOverview.html',protein=protein+"%", carbs=carbs+"%", fat=fat+"%")
 
 # Route for the settings page
 @app.route('/settings')
@@ -26,7 +36,7 @@ def mealPlanning():
 def save_settings():
     data = fl.request.json  # Get JSON data sent from frontend
     print("Data received:", data)
-
+    #calculateMacros(data)
     # Process the data (save it to a database, file, etc.)
 
     return fl.jsonify({"status": "success", "data_received": data})

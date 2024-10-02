@@ -38,15 +38,15 @@
         <h3 class="Setting">Gender</h3>
 
       <div class = "form-check">
-          <input class="form-check-input" type="radio" name="Gender" id="ManCheck" checked>
-          <label class="form-check-label" for="ManCheck">
+          <input class="form-check-input" type="radio" name="Gender" id="Man" checked>
+          <label class="form-check-label" for="Man">
           Man
             </label>
         </div>
 
       <div class = "form-check">
-        <input class="form-check-input" type="radio" name="Gender" id="WomanCheck">
-        <label class="form-check-label" for="WomanCheck">
+        <input class="form-check-input" type="radio" name="Gender" id="Woman">
+        <label class="form-check-label" for="Woman">
           Woman
         </label>
       </div>
@@ -58,21 +58,21 @@
       <h3 class="Setting">Goals</h3>
 
       <div class = "form-check">
-        <input class="form-check-input" type="radio" name="Goals" id="LoseWeightCheck" checked>
-        <label class="form-check-label" for="LoseWeightCheck">
+        <input class="form-check-input" type="radio" name="Goals" id="LoseWeight" checked>
+        <label class="form-check-label" for="LoseWeight">
          Lose Weight
         </label>
       </div>
 
       <div class = "form-check">
-        <input class="form-check-input" type="radio" name="Goals" id="MaintainWeightCheck" checked>
-        <label class="form-check-label" for="MaintainWeightCheck">
+        <input class="form-check-input" type="radio" name="Goals" id="MaintainWeight" checked>
+        <label class="form-check-label" for="MaintainWeight">
           Maintain Weight
         </label>
       </div>
       <div class = "form-check">
-        <input class="form-check-input" type="radio" name="Goals" id="GainWeightCheck">
-        <label class="form-check-label" for="GainWeightCheck">
+        <input class="form-check-input" type="radio" name="Goals" id="GainWeight">
+        <label class="form-check-label" for="GainWeight">
          Gain Weight
         </label>
       </div>
@@ -81,28 +81,71 @@
   <hr/>
   <div class="row">
     <div class="col-12">
+      <h3 class="Setting">Activity Level</h3>
+
+      <div class = "form-check">
+        <input class="form-check-input" type="radio" name="ActivityLevel" id="veryActive" checked>
+        <label class="form-check-label" for="veryActive">
+          Very Active ( Workout 6-7 times per week)
+        </label>
+      </div>
+
+      <div class = "form-check">
+        <input class="form-check-input" type="radio" name="ActivityLevel" id="active" checked>
+        <label class="form-check-label" for="active">
+          Active ( Workout 3-5 times per week)
+        </label>
+      </div>
+      <div class = "form-check">
+        <input class="form-check-input" type="radio" name="ActivityLevel" id="lightActive">
+        <label class="form-check-label" for="lightActive">
+          Light Active ( Workout 1-2 times per week)
+        </label>
+      </div>
+      <div class = "form-check">
+        <input class="form-check-input" type="radio" name="ActivityLevel" id="bmr">
+        <label class="form-check-label" for="bmr">
+          Use Basal Metabolic Rate
+        </label>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-12">
       <h3 class="Setting">Information</h3>
     </div>
-    <div class="col-6">
+    <div class="col-4">
 
       <div class = "input-group mb-3">
 
 
-        <input class="form-control" type="number" placeholder="Input Weight" >
+        <input class="form-control" type="number" placeholder="Input Weight" name="Weight" >
         <span class="input-group-text">kg</span>
       </div>
 
 
       </div>
-    <div class="col-6">
+    <div class="col-4">
       <div class = "input-group mb-3">
 
 
-        <input class="form-control" type="number" placeholder="Input Height" >
+        <input class="form-control" type="number" placeholder="Input Height" name="Height" >
         <span class="input-group-text">cm</span>
 
 
       </div>
+    </div>
+    <div class="col-4">
+
+      <div class = "input-group mb-3">
+
+
+        <input class="form-control" type="number" placeholder="Input Age" name="Age" >
+        <span class="input-group-text">years</span>
+      </div>
+
+
     </div>
   </div>
 </div>

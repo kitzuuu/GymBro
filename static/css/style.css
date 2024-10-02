@@ -71,7 +71,15 @@
 .activebtn {
     background-color: #dc143c;
 }
-
+#macro-fat{
+    color:yellow;
+}
+#macro-carbs{
+    color:steelblue;
+}
+#macro-protein{
+    color:green;
+}
 .form-check label{
     color: lightgray;
 }
@@ -83,4 +91,13 @@
 .current-page{
     pointer-events: none;
     color:red !important;
+}
+p{
+    color:white;
+}
+h2{
+    color:white;
+}
+h3{
+    color:white;
 }
