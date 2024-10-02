@@ -1,6 +1,11 @@
+// JavaScript to automatically save user input
+// EventListener for dropdown
+    document.getElementById('dropdownBox').addEventListener('click', function() {
+    this.classList.toggle('expanded');
+});
+
+
 document.addEventListener('DOMContentLoaded', function() {
-
-
     // Get all input elements
     const inputs = document.querySelectorAll('input[type="radio"], input[type="number"]');
 
@@ -15,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Restore saved value from local storage on load
-        const savedValue = localStorage.getItem( input.name);
+        const savedValue = localStorage.getItem(input.placeholder || input.name);
         if (savedValue) {
             if (input.type === 'radio' && input.id === savedValue) {
                 input.checked = true;
