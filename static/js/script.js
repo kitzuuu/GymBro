@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
             } else if (input.type === 'number') {
                 localStorage.setItem(input.name, input.value);
             }
+            sendDataToBackend();
+
         });
 
         // Restore saved value from local storage on load
@@ -25,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     });
-    sendDataToBackend();
 
 
 });
