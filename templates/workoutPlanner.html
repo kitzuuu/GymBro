@@ -12,15 +12,19 @@
     <div class="row" id="nav">
         <div class="col-3" id="logo">
             <div class="text-center">
-                <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo" id="logo-image">
+                <img src="{{ url_for('static', filename='images/logo.jpg') }}" alt="Logo" id="logo-image" >
             </div>
         </div>
-        <div class="col-9">
+        <div class="col-6">
             <div class="text-center">
-                <a href="{{ url_for('macroOverview') }}">Macro Overview</a>
-                <a href="{{ url_for('mealPlanning') }}">Meal Planning</a>
-                <a href="{{ url_for('workoutPlanner') }}" class="current-page">Workout Planner</a>
-                <a href="{{ url_for('settings') }}">Settings</a>
+                <a href="{{ url_for('mealPlanning') }}" >Meal Planning</a>
+                <a href="{{ url_for('workoutPlanner') }}"class="current-page">Workout Planner</a>
+
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="text-center">
+                <img src="{{ url_for('static', filename='images/Updated_NutritionixAPI_hires_flat.png') }}" alt="Nutritionix Logo" id="logo-image-nutritionix">
             </div>
         </div>
     </div>
@@ -44,7 +48,5 @@
         </div>
     </div>
 </div>
-
-
 </body>
 </html>

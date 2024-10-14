@@ -63,6 +63,12 @@
     min-height:75px;
     min-width:75px;
 }
+#logo-image-nutritionix{
+    max-width:250px;
+    max-height: 125px;
+    min-height:75px;
+    min-width:75px;
+}
 
 #nav  a:hover {
     color: blue;
@@ -92,7 +98,6 @@
     pointer-events: none;
     color:red !important;
 }
-/* style.css */
 .page-background {
     background-image: url('/static/images/ImageWorkoutPlanner.webp'); /* Correct path to the image */
     background-size: cover;
