@@ -1,169 +1,169 @@
-.container{
-    background-color: #121212;
-    min-height: 100vh;
-    min-width: 100vw;
-}
-#head-text{
-    margin-bottom: 50px;
-    color: white;
-}
-#protein-text-h2 {
-    color: green;
-}
-#protein-progress-bar{
+    .container{
+        background-color: #121212;
+        min-height: 100vh;
+        min-width: 100vw;
+    }
+    #head-text{
+        margin-bottom: 50px;
+        color: white;
+    }
+    #protein-text-h2 {
+        color: green;
+    }
+    #protein-progress-bar{
 
-}
-#protein-progress{
-    margin-bottom: 75px;
-}
-#carbs-text-h2 {
-    color: steelblue;
-}
-#carbs-progress-bar{
+    }
+    #protein-progress{
+        margin-bottom: 75px;
+    }
+    #carbs-text-h2 {
+        color: steelblue;
+    }
+    #carbs-progress-bar{
 
-}
-#carbs-progress{
-    margin-bottom: 75px;
-}
-#fat-text-h2 {
-    color: yellow;
-}
-#fat-progress-bar{
+    }
+    #carbs-progress{
+        margin-bottom: 75px;
+    }
+    #fat-text-h2 {
+        color: yellow;
+    }
+    #fat-progress-bar{
 
-}
-#fat-progress{
-    margin-bottom: 75px;
-}
-
-
-#nav {
-    background-color: #000;
-    align-items: center;
-    padding: 25px; /* Increased padding */
-    font-family: Calibri, sans-serif;
-    font-size: large;
-    justify-content: space-between;
-   /* Increased height */
-}
-
-#nav a {
-    border-radius: 58px;
-    color: #fff;
-    font-size: inherit;
-    padding: 15px 20px;
-    text-decoration: none;
-}
-#logo{
-    display: inline;
-    margin : auto;
-}
-#logo-image{
-    max-width:125px;
-    max-height: 125px;
-    min-height:75px;
-    min-width:75px;
-}
-#logo-image-nutritionix{
-    max-width:250px;
-    max-height: 125px;
-    min-height:75px;
-    min-width:75px;
-}
-
-#nav  a:hover {
-    color: blue;
-}
-
-.activebtn {
-    background-color: #dc143c;
-}
-#macro-fat{
-    color:yellow;
-}
-#macro-carbs{
-    color:steelblue;
-}
-#macro-protein{
-    color:green;
-}
-.form-check label{
-    color: lightgray;
-}
-
-.Setting{
-    color:lightgray;
-}
-
-.current-page{
-    pointer-events: none;
-    color:red !important;
-}
-.page-background {
-    background-image: url('/static/images/ImageWorkoutPlanner.webp'); /* Correct path to the image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    flex-direction: column;
-    min-height: 100vh; /* Ensures the div takes full viewport height */
-}
-#predefinedWorkoutBox {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for the main box */
-    margin-top: 35%;
-}
-
-#predefinedWorkout {
-    text-align: center;
-    padding: 20px;
-}
-
-#predefinedWorkout p {
-    font-size: 18px;
-    font-weight: bold;
-}
-
-/* Style for the workout plans grid */
-#workoutPlans .row {
-    margin-top: 20px;
-}
-
-.workout-plan {
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for each workout plan */
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-    font-weight: bold;
-    justify-content: center;
-    cursor: pointer;
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-/* Hover effect for each workout plan */
-.workout-plan:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-/* Make sure the workout plans container covers the bottom half of the page */
-#predefinedWorkouts {
-    min-height: 50vh; /* Ensure it takes half the viewport height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    }
+    #fat-progress{
+        margin-bottom: 75px;
+    }
 
 
-p{
-    color:white;
-}
-h2{
-    color:white;
-}
-h3{
-    color:white;
-}
+    #nav {
+        background-color: #000;
+        align-items: center;
+        padding: 25px; /* Increased padding */
+        font-family: Calibri, sans-serif;
+        font-size: large;
+        justify-content: space-between;
+       /* Increased height */
+    }
+
+    #nav a {
+        border-radius: 58px;
+        color: #fff;
+        font-size: inherit;
+        padding: 15px 20px;
+        text-decoration: none;
+    }
+    #logo{
+        display: inline;
+        margin : auto;
+    }
+    #logo-image{
+        max-width:125px;
+        max-height: 125px;
+        min-height:75px;
+        min-width:75px;
+    }
+    #logo-image-nutritionix{
+        max-width:250px;
+        max-height: 125px;
+        min-height:75px;
+        min-width:75px;
+    }
+
+    #nav  a:hover {
+        color: blue;
+    }
+
+    .activebtn {
+        background-color: #dc143c;
+    }
+    #macro-fat{
+        color:yellow;
+    }
+    #macro-carbs{
+        color:steelblue;
+    }
+    #macro-protein{
+        color:green;
+    }
+    .form-check label{
+        color: lightgray;
+    }
+
+    .Setting{
+        color:lightgray;
+    }
+
+    .current-page{
+        pointer-events: none;
+        color:red !important;
+    }
+    .page-background {
+        background-image: url('/static/images/ImageWorkoutPlanner.webp'); /* Correct path to the image */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        flex-direction: column;
+        min-height: 100vh; /* Ensures the div takes full viewport height */
+    }
+    #predefinedWorkoutBox {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for the main box */
+        margin-top: 35%;
+    }
+
+    #predefinedWorkout {
+        text-align: center;
+        padding: 20px;
+    }
+
+    #predefinedWorkout p {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    /* Style for the workout plans grid */
+    #workoutPlans .row {
+        margin-top: 20px;
+    }
+
+    .workout-plan {
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for each workout plan */
+        border-radius: 10px;
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+        font-weight: bold;
+        justify-content: center;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    /* Hover effect for each workout plan */
+    .workout-plan:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Make sure the workout plans container covers the bottom half of the page */
+    #predefinedWorkouts {
+        min-height: 50vh; /* Ensure it takes half the viewport height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    p{
+        color:white;
+    }
+    h2{
+        color:white;
+    }
+    h3{
+        color:white;
+    }
