@@ -23,3 +23,32 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+var socket = io.connect(); // Initialize the socket connection
+
+// Function to send a message to the server
+function sendMessage() {
+    var userInput = document.getElementById('user-input').value;
+    if (userInput.trim() !== "") {
+        document.getElementById('chat-box').innerHTML += '<p><strong>You:</strong> ' + userInput + '</p>';
+        socket.emit('message', userInput); // Emit the message to the server
+        document.getElementById('user-input').value = ''; // Clear the input field
+    }
+}
+
+// Event listener for send button
+document.getElementById('send-message').addEventListener('click', sendMessage);
+
+// Event listener for receiving chatbot response
+socket.on('response', function(data) {
+    document.getElementById('chat-box').innerHTML += '<p><strong>Bot:</strong> ' + data + '</p>';
+    // Scroll to the bottom of the chat box
+    var chatBox = document.getElementById('chat-box');
+    chatBox.scrollTop = chatBox.scrollHeight;
+});
+
+// Allow sending messages via Enter key
+document.getElementById('user-input').addEventListener('keyup', function(event) {
+    if (event.keyCode === 13) {
+        sendMessage();
+    }
+});

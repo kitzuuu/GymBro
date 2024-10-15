@@ -167,15 +167,3 @@
     h3{
         color:white;
     }
-    /* Additional CSS for the modal animation */
-    .modal.fade .modal-dialog {
-        -webkit-transform: translate(0, -50px);
-        transform: translate(0, -50px);
-        -webkit-transition: -webkit-transform 0.3s ease-out;
-        transition: transform 0.3s ease-out;
-    }
-
-    .modal.show .modal-dialog {
-        -webkit-transform: translate(0, 0);
-        transform: translate(0, 0);
-    }
