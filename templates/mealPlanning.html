@@ -50,18 +50,33 @@
         <div class="col-12">
             <h2>Meal Tracking</h2>
             <div id="meal-input-form">
-                <input type="text" id="meal-name" placeholder="Meal Name" />
+                <input type="text" id="food-name" placeholder="Food Name" />
                 <input type="number" id="meal-calories" placeholder="Calories" />
                 <input type="number" id="meal-protein" placeholder="Protein (g)" />
                 <input type="number" id="meal-carbs" placeholder="Carbs (g)" />
                 <input type="number" id="meal-fat" placeholder="Fat (g)" />
                 <button id="add-meal-btn">Add Meal</button>
             </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <h3>Meal Description using AI</h3>
+            <form id="ai-form">
+                <div class="form-group">
+                    <textarea class="form-control" id="nutritionixForm" rows="2" placeholder="Describe your meal and add it using AI"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary click" id="nutritionixButton">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="row" id="mealTable">
+        <div class="col-12">
             <h3>Today's Meals</h3>
             <table id="meal-log-table" class="table">
                 <thead>
                 <tr>
-                    <th>Meal Name</th>
+                    <th>Food Name</th>
                     <th>Calories</th>
                     <th>Protein (g)</th>
                     <th>Carbs (g)</th>
@@ -72,7 +87,6 @@
                 </tbody>
             </table>
         </div>
-
     </div>
 </div>
 <script src="{{ url_for('static', filename='js/mealPlanning.js') }}"></script>
