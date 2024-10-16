@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     confetti({
                         particleCount: 100,
                         spread: 70,
-                        origin: { y: 0.6 }
+                        origin: {y: 0.6}
                     });
 
                     // Change the background color of the workout plan to green
@@ -39,7 +39,7 @@ function sendMessage() {
 document.getElementById('send-message').addEventListener('click', sendMessage);
 
 // Event listener for receiving chatbot response
-socket.on('response', function(data) {
+socket.on('response', function (data) {
     document.getElementById('chat-box').innerHTML += '<p><strong>Bot:</strong> ' + data + '</p>';
     // Scroll to the bottom of the chat box
     var chatBox = document.getElementById('chat-box');
@@ -47,8 +47,25 @@ socket.on('response', function(data) {
 });
 
 // Allow sending messages via Enter key
-document.getElementById('user-input').addEventListener('keyup', function(event) {
+document.getElementById('user-input').addEventListener('keyup', function (event) {
     if (event.keyCode === 13) {
         sendMessage();
     }
+});
+    $(document).ready(function () {
+    $('#recommend-workout').on('click', function (e) {
+        e.preventDefault();
+        $('#loginModal').fadeIn(500); // 500ms fade-in effect
+    });
+
+    $('#loginModal').on('shown.bs.modal', function () {
+    $('#username').trigger('focus'); // Focus on the username field when the modal opens
+});
+
+    // Custom form submission (optional)
+    $('#loginForm').on('submit', function (e) {
+    e.preventDefault();
+    // Perform login action (for now just close the modal)
+    $('#loginModal').modal('hide');
+});
 });
