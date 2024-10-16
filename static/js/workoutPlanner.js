@@ -2,70 +2,49 @@ document.addEventListener("DOMContentLoaded", function () {
     // Get all workout plans
     const workoutPlans = document.querySelectorAll(".workout-plan");
 
-    workoutPlans.forEach(function (plan) {
-        const checkboxes = plan.querySelectorAll("input[type='checkbox']");
+    const workoutWeights = {
+        'plan1': 0.2, // Intensive-Legs (High Intensity)
+        'plan2': 0.2, // Upper Body Strength (Medium Intensity)
+        'plan3': 0.3, // Full Body Circuit (High Intensity)
+        'plan4': 0.15, // Lower Body Endurance (Medium Intensity)
+        'plan5': 0.15  // Shoulder and Arms (Medium Intensity)
+    };
 
-        checkboxes.forEach(function (checkbox) {
-            checkbox.addEventListener("change", function () {
-                // Check if all checkboxes are checked
-                if (Array.from(checkboxes).every(checkbox => checkbox.checked)) {
-                    // Trigger confetti animation
-                    confetti({
-                        particleCount: 100,
-                        spread: 70,
-                        origin: {y: 0.6}
-                    });
+    // Function to get a random workout based on weights
+    function getRandomWorkout(weights) {
+        let sum = 0;
+        let random = Math.random();
 
-                    // Change the background color of the workout plan to green
-                    plan.style.backgroundColor = "green";
-                }
-            });
-        });
-    });
-});
-var socket = io.connect(); // Initialize the socket connection
-
-// Function to send a message to the server
-function sendMessage() {
-    var userInput = document.getElementById('user-input').value;
-    if (userInput.trim() !== "") {
-        document.getElementById('chat-box').innerHTML += '<p><strong>You:</strong> ' + userInput + '</p>';
-        socket.emit('message', userInput); // Emit the message to the server
-        document.getElementById('user-input').value = ''; // Clear the input field
+        for (const plan in weights) {
+            sum += weights[plan];
+            if (random <= sum) {
+                return plan; // Return selected plan
+            }
+        }
+        // Fallback to the last workout if something goes wrong
+        return Object.keys(weights)[Object.keys(weights).length - 1];
     }
-}
 
-// Event listener for send button
-document.getElementById('send-message').addEventListener('click', sendMessage);
+    // Workout names for display
+    const workoutNames = {
+        'plan1': 'Intensive-Legs (High Intensity)',
+        'plan2': 'Upper Body Strength (Medium Intensity)',
+        'plan3': 'Full Body Circuit (High Intensity)',
+        'plan4': 'Lower Body Endurance (Medium Intensity)',
+        'plan5': 'Shoulder and Arms (Medium Intensity)'
+    };
 
-// Event listener for receiving chatbot response
-socket.on('response', function (data) {
-    document.getElementById('chat-box').innerHTML += '<p><strong>Bot:</strong> ' + data + '</p>';
-    // Scroll to the bottom of the chat box
-    var chatBox = document.getElementById('chat-box');
-    chatBox.scrollTop = chatBox.scrollHeight;
-});
+    // Handle form submission from the questionnaire
+    const form = document.getElementById('questionnaireForm');
+    form.addEventListener('submit', function (e) {
+        e.preventDefault(); // Prevent default form submission behavior
 
-// Allow sending messages via Enter key
-document.getElementById('user-input').addEventListener('keyup', function (event) {
-    if (event.keyCode === 13) {
-        sendMessage();
-    }
-});
-    $(document).ready(function () {
-    $('#recommend-workout').on('click', function (e) {
-        e.preventDefault();
-        $('#loginModal').fadeIn(500); // 500ms fade-in effect
+        const selectedPlanId = getRandomWorkout(workoutWeights);
+        const selectedWorkoutText = workoutNames[selectedPlanId];
+
+        // Display the selected workout inside the modal
+        const resultDiv = document.getElementById('recommendation-result');
+        resultDiv.innerText = `Recommended Workout: ${selectedWorkoutText}`;
+        resultDiv.style.display = 'block'; // Show the result
     });
-
-    $('#loginModal').on('shown.bs.modal', function () {
-    $('#username').trigger('focus'); // Focus on the username field when the modal opens
-});
-
-    // Custom form submission (optional)
-    $('#loginForm').on('submit', function (e) {
-    e.preventDefault();
-    // Perform login action (for now just close the modal)
-    $('#loginModal').modal('hide');
-});
 });
