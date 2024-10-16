@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Function to append a meal to the meal log table
+    // Function to append a meal for the meal log table
     function appendMealToTable(meal) {
         const tableBody = document.querySelector('#meal-log-table tbody');
         const row = document.createElement('tr');
