@@ -26,7 +26,10 @@ def workoutPlanner():
 @app.route('/process_meal', methods=['POST'])
 def process_meal():
     data = fl.request.json  # Get JSON data sent from frontend
-    print("Data received:", data)
+    api_response = call_api(data)
+    return fl.jsonify({"status": "success", "food_nutrition": api_response})
+
+
 # Socket for real-time chatbot communication
 @socketio.on('message')
 def handle_message(message):
@@ -35,11 +38,7 @@ def handle_message(message):
     emit('response', response)
 
     # Assuming ApiCaller.call_api processes data and returns a response
-    api_response = call_api(data)
-    print(api_response)
 
-    # Return the processed food_nutrition dictionary as a JSON response
-    return fl.jsonify({"status": "success", "food_nutrition": api_response})
 # Function to call OpenAI and generate the workout recommendation
 def generate_workout_recommendation(user_input):
     try:
