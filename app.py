@@ -1,33 +1,31 @@
-from socket import SocketIO
-
-import flask as fl
-from api.ApiCaller import call_api
-from api.ProcessResponse import process_response
-from flask_socketio import SocketIO, emit
+from flask import Flask, render_template, request, jsonify
 import openai
+from flask_socketio import SocketIO, emit
 
-app = fl.Flask(__name__)
-socketio = SocketIO(app)
+from api.ApiCaller import call_api
+
+app = Flask(__name__)
+socketio = SocketIO(app, async_mode='threading') # Specify async_mode
 
 # Initialize OpenAI API
 openai.api_key = 'your-openai-api-key'
 
 @app.route('/')
 def mealPlanning():
-    return fl.render_template('mealPlanning.html')
+    return render_template('mealPlanning.html')
 # Route for the settings page
 
 
 
 @app.route('/workoutPlanner')
 def workoutPlanner():
-    return fl.render_template('workoutPlanner.html')
+    return render_template('workoutPlanner.html')
 
 @app.route('/process_meal', methods=['POST'])
 def process_meal():
-    data = fl.request.json  # Get JSON data sent from frontend
+    data = request.json  # Get JSON data sent from frontend
     api_response = call_api(data)
-    return fl.jsonify({"status": "success", "food_nutrition": api_response})
+    return jsonify({"status": "success", "food_nutrition": api_response})
 
 
 # Socket for real-time chatbot communication
@@ -57,7 +55,9 @@ def generate_workout_recommendation(user_input):
 
 # Run the Flask app
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run( port=5001, debug=True)
+
+
 
 
 
