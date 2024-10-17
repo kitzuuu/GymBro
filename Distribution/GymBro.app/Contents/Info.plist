@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDisplayName</key>
+	<string>GymBro</string>
+	<key>CFBundleExecutable</key>
+	<string>GymBro</string>
+	<key>CFBundleIconFile</key>
+	<string>generated-12a63664b0ba4c9fe54f9acbcaf18be995d722d47fa4226131a8d41b0d196e86.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string>GymBro</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>GymBro</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.0.0</string>
+	<key>NSHighResolutionCapable</key>
+	<true/>
+</dict>
+</plist>

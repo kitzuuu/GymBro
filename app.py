@@ -1,4 +1,13 @@
 from flask import Flask, render_template, request, jsonify
+import logging
+from PyInstaller.utils.hooks import copy_metadata
+
+# Include metadata for requests package
+datas = copy_metadata('requests')
+
+
+logging.basicConfig(filename='app.log', level=logging.DEBUG)
+
 
 from api.ApiCaller import call_api
 
@@ -23,9 +32,6 @@ def process_meal():
     return jsonify({"status": "success", "food_nutrition": api_response})
 
 if __name__ == '__main__':
-    app.run( port=5001 )
-
-
-
+    app.run( port=5001, debug=True)
 
 

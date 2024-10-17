@@ -1,0 +1,15 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5001
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 655-683-359
+INFO:werkzeug: * Detected change in '/Users/kitzu/GymBro/app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 655-683-359
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 14:41:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 14:41:35] "GET /static/css/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 14:41:35] "GET /static/images/logo.jpg HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 14:41:35] "GET /static/js/mealPlanning.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [17/Oct/2024 14:41:35] "GET /static/images/Updated_NutritionixAPI_hires_flat.png HTTP/1.1" 200 -
